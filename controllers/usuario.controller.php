@@ -69,13 +69,13 @@ if (isset($_GET['op'])){
             //Las variables coinciden
             $datosenviar = [
                 "id_usuario" => $_SESSION['id_usuario'], 
-                "password" => $newpassword
+                "password" => password_hash($newpassword, PASSWORD_BCRYPT)
             ];
             $usuario->changepassword($datosenviar);
-            echo "SI";
+            echo "";
         } else {
             //Las variables no coinciden
-            echo "Las contraseñas ingresada no es correcta";
+            echo "Las contraseña ingresada no es correcta";
         }
     }
 
