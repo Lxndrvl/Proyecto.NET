@@ -6,9 +6,8 @@ if (isset($_SESSION['acceso'])){
     header('Location:views/');
   }
 }
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
